@@ -1,16 +1,7 @@
-logging:
-  #file: logs/dev_app.log
-  pattern:
-    console: "%d %-5level %logger : %msg%n"
-    #file: "%d %-5level [%thread] %logger : %msg%n"
-  level:
-    com: DEBUG
 spring:
   mail:
-    host: smtp.gmail.com
-    port: 587
-    username: *******************
-    password: *******************
+    host: localhost
+    port: 25
     default-encoding: utf-8
     # for adding more properties see https://javaee.github.io/javamail/docs/api/com/sun/mail/smtp/package-summary.html
     properties:
@@ -19,10 +10,7 @@ spring:
           charset: utf-8
         smtp:
           allow8bitmime: true
-          starttls:
-            enable: true
-            required: true
-          auth: true
+          auth: fale
           from: my@niro.com
           connectiontimeout: 5000
           timeout: 5000
